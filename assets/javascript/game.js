@@ -10,6 +10,7 @@ var gem4 = 0;
 $(document).ready(function() {
 
 $("[id^=gem]").on("click", function() {
+// looks at all divs with an id of gem* and executes click(gem*)
     click(eval($(this).attr("id")));
   });
 
@@ -25,19 +26,6 @@ $("[id^=gem]").on("click", function() {
     }
     update();
   }
-
-  // $("#gem1").on("click", function() {
-  //   click(gem1);
-  // });
-  // $("#gem2").on("click", function() {
-  //   click(gem2);
-  // });
-  // $("#gem3").on("click", function() {
-  //   click(gem3);
-  // });
-  // $("#gem4").on("click", function() {
-  //   click(gem4);
-  // });
 
 function reset(){
 
@@ -72,6 +60,8 @@ document.onkeydown = checkKey;
   function checkKey(e) {
    var event = window.event ? window.event : e;
     latest = event.key;
+//  Makes sure that the key pressed is a number and then runs click(gem*)
+
     if (latest % 1 === 0) {
       click(eval("gem"+latest));
     }

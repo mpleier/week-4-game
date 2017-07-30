@@ -2,6 +2,11 @@
   border-radius: 25px;
 
 }
+body {
+  background: url(../images/3477.jpg);
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+}
 h1 {
 
   background-color: orange;
