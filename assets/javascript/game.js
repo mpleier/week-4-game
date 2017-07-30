@@ -26,10 +26,12 @@ function reset(){
   targetNumber = Math.floor(Math.random() * 50)+50;
   current = 0;
   gem1 = Math.floor(Math.random() * 10)+1;
-  gem2 = Math.floor(Math.random() * 10)+1;
-  gem3 = Math.floor(Math.random() * 10)+1;
-  gem4 = Math.floor(Math.random() * 10)+1;
-
+  gem2 = Math.floor(Math.random() * 20)+1;
+  gem3 = Math.floor(Math.random() * 30)+1;
+  gem4 = Math.floor(Math.random() * 40)+1;
+    if ((gem1 + gem2 + gem3 / target) % 1 === 0){
+      gem4 = 1;
+    }
 
   update();
 }
