@@ -60,8 +60,28 @@ reset();
     update();
   }
 
+document.onkeydown = checkKey;
+
+  function checkKey(e) {
+      var event = window.event ? window.event : e;
+      latest = event.key;
 
 
+switch(latest) {
+    case "1":
+        click(gem1);
+        break;
+    case "2":
+        click(gem2);
+        break;
+    case "3":
+        click(gem3);
+        break;
+    case "4":
+        click(gem4);
+        break;
+    default:
 
+}}
 
 });
